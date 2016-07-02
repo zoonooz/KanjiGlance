@@ -1,7 +1,7 @@
 # KanjiGlance
 Remember Kanji while you are working or doing something else on your desktop by just glace at the status bar.
 
-<p align="center"><img src="https://raw.githubusercontent.com/zoonooz/KanjiGlance/master/screenshot.png"/></p>
+![](screenshot.png)
 
 ### Todo
 - [ ] Add more Kanji sets
@@ -10,6 +10,10 @@ Remember Kanji while you are working or doing something else on your desktop by 
 - [ ] ...
 
 Pull Request are welcome!
+
+## Credit
+
+Kanji data from [http://tangorin.com/](http://tangorin.com/)
 
 ## Author
 
