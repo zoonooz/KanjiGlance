@@ -86,6 +86,16 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H01-9s-h5D">
+                    <rect key="frame" x="274" y="247" width="49" height="32"/>
+                    <buttonCell key="cell" type="push" title="S" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BRX-Q1-iQV">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="settingButtonPressed:" target="-2" id="b3z-Or-wzf"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Yfw-j4-W2H" secondAttribute="trailing" constant="20" id="1MR-7V-WjN"/>
@@ -95,8 +105,10 @@
                 <constraint firstItem="84M-zK-ni7" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="ERf-gu-Jll"/>
                 <constraint firstItem="zS3-KW-i0o" firstAttribute="leading" secondItem="kaS-eY-Eyy" secondAttribute="trailing" constant="8" id="FGu-Ea-2gX"/>
                 <constraint firstItem="kaS-eY-Eyy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="GQQ-b4-rGd"/>
+                <constraint firstAttribute="trailing" secondItem="H01-9s-h5D" secondAttribute="trailing" constant="8" id="IzA-oV-elv"/>
                 <constraint firstItem="kaS-eY-Eyy" firstAttribute="top" secondItem="84M-zK-ni7" secondAttribute="bottom" constant="8" id="Njb-hp-FXw"/>
                 <constraint firstItem="gRS-94-EqT" firstAttribute="top" secondItem="Yfw-j4-W2H" secondAttribute="top" id="SAn-tv-19E"/>
+                <constraint firstItem="H01-9s-h5D" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="UCB-a9-TJ0"/>
                 <constraint firstAttribute="trailing" secondItem="IcS-rO-cEx" secondAttribute="trailing" constant="20" id="WjU-ZZ-jWw"/>
                 <constraint firstItem="IcS-rO-cEx" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="ZOi-ai-NYH"/>
                 <constraint firstItem="84M-zK-ni7" firstAttribute="top" secondItem="IcS-rO-cEx" secondAttribute="bottom" constant="8" id="eFK-ai-MjH"/>

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import MASPreferences
 
 class KanjiViewController: NSViewController {
     
@@ -14,6 +15,14 @@ class KanjiViewController: NSViewController {
     @IBOutlet weak var firstMeaningTextField: NSTextField!
     @IBOutlet weak var meaingTextField: NSTextField!
     @IBOutlet weak var readingTextField: NSTextField!
+    
+    private lazy var prefViewController: MASPreferencesWindowController = {
+        let generalPref = GeneralPreferenceViewController()
+        let pref = MASPreferencesWindowController(
+            viewControllers: [generalPref],
+            title: "Preferences")
+        return pref
+    }()
     
     let kanji: Kanji
     
@@ -35,4 +44,7 @@ class KanjiViewController: NSViewController {
         readingTextField.stringValue = kanji.reading
     }
     
+    @IBAction func settingButtonPressed(sender: AnyObject) {
+        prefViewController.showWindow(nil)
+    }
 }
