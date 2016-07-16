@@ -16,22 +16,24 @@ class KanjiViewController: NSViewController {
     @IBOutlet weak var meaingTextField: NSTextField!
     @IBOutlet weak var readingTextField: NSTextField!
     
+    let kanji: Kanji
+    let user: User
+    
     private lazy var prefViewController: MASPreferencesWindowController = {
-        let generalPref = GeneralPreferenceViewController()
+        let generalPref = GeneralPreferenceViewController(user: self.user)
         let pref = MASPreferencesWindowController(
             viewControllers: [generalPref],
             title: "Preferences")
         return pref
     }()
     
-    let kanji: Kanji
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init?(kanji: Kanji) {
+    init?(kanji: Kanji, user: User) {
         self.kanji = kanji
+        self.user = user
         super.init(nibName: "KanjiViewController", bundle: nil)
     }
     

@@ -14,7 +14,7 @@ struct Kanji {
     var meaning: String
     
     init(raw: String) {
-        let data = raw.componentsSeparatedByString(",")
+        let data = raw.componentsSeparatedByString("#")
         self.init(writing: data[0], reading: data[1], meaning: data[2])
     }
     

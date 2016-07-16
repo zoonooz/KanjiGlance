@@ -3,18 +3,111 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferenceViewController" customModule="kanjiglance" customModuleProvider="target">
             <connections>
+                <outlet property="n1Button" destination="k1w-9l-2LT" id="WgJ-rO-PD1"/>
+                <outlet property="n2Button" destination="3IM-pA-L0d" id="jCO-rJ-SQR"/>
+                <outlet property="n3Button" destination="Mkf-t3-1nJ" id="pFD-Gp-ti9"/>
+                <outlet property="n4Button" destination="lcg-aD-rnX" id="lIn-ES-MgY"/>
+                <outlet property="n5Button" destination="geq-14-TQm" id="h9Z-LO-DaL"/>
                 <outlet property="view" destination="Fwl-zS-9X4" id="bOf-tD-HyI"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Fwl-zS-9X4">
-            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <rect key="frame" x="0.0" y="0.0" width="321" height="207"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box title="Kanji Level" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="z4v-xH-BVa">
+                    <rect key="frame" x="17" y="27" width="287" height="160"/>
+                    <view key="contentView" id="xNo-Nd-XV0">
+                        <rect key="frame" x="1" y="1" width="285" height="144"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="geq-14-TQm">
+                                <rect key="frame" x="19" y="107" width="248" height="18"/>
+                                <buttonCell key="cell" type="radio" title="N5" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="qJf-zW-Wul">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="levelButtonClick:" target="-2" id="rSe-ud-4Du"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="lcg-aD-rnX">
+                                <rect key="frame" x="19" y="85" width="248" height="18"/>
+                                <buttonCell key="cell" type="radio" title="N4" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="RLB-mg-GXF">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="levelButtonClick:" target="-2" id="1eI-NA-pWK"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Mkf-t3-1nJ">
+                                <rect key="frame" x="19" y="63" width="248" height="18"/>
+                                <buttonCell key="cell" type="radio" title="N3" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="HFT-kj-Y7e">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="levelButtonClick:" target="-2" id="eFi-3y-sLb"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="3IM-pA-L0d">
+                                <rect key="frame" x="19" y="41" width="248" height="18"/>
+                                <buttonCell key="cell" type="radio" title="N2" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="87U-5m-TST">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="levelButtonClick:" target="-2" id="BZW-78-xgb"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="k1w-9l-2LT">
+                                <rect key="frame" x="19" y="19" width="248" height="18"/>
+                                <buttonCell key="cell" type="radio" title="N1" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="LGW-oq-K0k">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="levelButtonClick:" target="-2" id="C0t-s3-jE2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lcg-aD-rnX" secondAttribute="trailing" constant="20" id="0ZU-Ol-4TX"/>
+                            <constraint firstItem="geq-14-TQm" firstAttribute="top" secondItem="xNo-Nd-XV0" secondAttribute="top" constant="20" id="3d2-bo-Kog"/>
+                            <constraint firstAttribute="trailing" secondItem="geq-14-TQm" secondAttribute="trailing" constant="20" id="4Py-s0-X6t"/>
+                            <constraint firstItem="Mkf-t3-1nJ" firstAttribute="top" secondItem="lcg-aD-rnX" secondAttribute="bottom" constant="6" id="OLz-Sj-zAp"/>
+                            <constraint firstItem="3IM-pA-L0d" firstAttribute="top" secondItem="Mkf-t3-1nJ" secondAttribute="bottom" constant="6" id="P1j-fw-MGG"/>
+                            <constraint firstItem="lcg-aD-rnX" firstAttribute="leading" secondItem="xNo-Nd-XV0" secondAttribute="leading" constant="20" id="Z6D-Ei-IDI"/>
+                            <constraint firstItem="3IM-pA-L0d" firstAttribute="leading" secondItem="xNo-Nd-XV0" secondAttribute="leading" constant="20" id="ZlJ-Od-GjA"/>
+                            <constraint firstItem="Mkf-t3-1nJ" firstAttribute="leading" secondItem="xNo-Nd-XV0" secondAttribute="leading" constant="20" id="cqy-K0-iRr"/>
+                            <constraint firstItem="lcg-aD-rnX" firstAttribute="top" secondItem="geq-14-TQm" secondAttribute="bottom" constant="6" id="kOX-Sd-jFt"/>
+                            <constraint firstItem="k1w-9l-2LT" firstAttribute="leading" secondItem="xNo-Nd-XV0" secondAttribute="leading" constant="20" id="mqM-Te-9ck"/>
+                            <constraint firstAttribute="trailing" secondItem="3IM-pA-L0d" secondAttribute="trailing" constant="20" id="nqn-Ca-ajl"/>
+                            <constraint firstAttribute="bottom" secondItem="k1w-9l-2LT" secondAttribute="bottom" constant="20" id="p6O-nr-Ufk"/>
+                            <constraint firstAttribute="trailing" secondItem="k1w-9l-2LT" secondAttribute="trailing" constant="20" id="pXk-ww-xSg"/>
+                            <constraint firstItem="geq-14-TQm" firstAttribute="leading" secondItem="xNo-Nd-XV0" secondAttribute="leading" constant="20" id="snA-Pv-2Ih"/>
+                            <constraint firstItem="k1w-9l-2LT" firstAttribute="top" secondItem="3IM-pA-L0d" secondAttribute="bottom" constant="6" id="x0F-Zl-evQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Mkf-t3-1nJ" secondAttribute="trailing" constant="20" id="y78-lY-zI8"/>
+                        </constraints>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="z4v-xH-BVa" firstAttribute="top" secondItem="Fwl-zS-9X4" secondAttribute="top" constant="20" id="I2X-WQ-o4W"/>
+                <constraint firstItem="z4v-xH-BVa" firstAttribute="leading" secondItem="Fwl-zS-9X4" secondAttribute="leading" constant="20" id="VQS-cg-NkY"/>
+                <constraint firstAttribute="trailing" secondItem="z4v-xH-BVa" secondAttribute="trailing" constant="20" id="p0d-BF-bjH"/>
+            </constraints>
+            <point key="canvasLocation" x="295.5" y="146.5"/>
         </customView>
     </objects>
 </document>

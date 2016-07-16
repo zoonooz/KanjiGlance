@@ -14,11 +14,42 @@ class GeneralPreferenceViewController: NSViewController, MASPreferencesViewContr
     var toolbarItemImage: NSImage! = NSImage(named: NSImageNamePreferencesGeneral)
     var toolbarItemLabel: String! = "General"
     
+    @IBOutlet weak var n1Button: NSButton!
+    @IBOutlet weak var n2Button: NSButton!
+    @IBOutlet weak var n3Button: NSButton!
+    @IBOutlet weak var n4Button: NSButton!
+    @IBOutlet weak var n5Button: NSButton!
+    
+    let user: User
+    var levelButtons: [NSButton] = []
+    
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        fatalError("init(coder:) has not been implemented")
     }
     
-    init() {
+    init(user: User) {
+        self.user = user
         super.init(nibName: "GeneralPreferenceViewController", bundle: nil)!
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpKanjiLevelButtons()
+    }
+    
+    // MARK:- Kanji Level
+    
+    private func setUpKanjiLevelButtons() {
+        levelButtons.appendContentsOf([n1Button, n2Button, n3Button, n4Button, n5Button])
+        let lv = user.level
+        levelButtons[lv - 1].state = NSOnState
+    }
+    
+    @IBAction func levelButtonClick(sender: NSButton) {
+        _ = levelButtons.indexOf(sender).map {
+            user.level = $0 + 1
+        }
+    }
+    
+    
 }

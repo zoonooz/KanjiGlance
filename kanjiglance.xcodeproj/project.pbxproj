@@ -12,12 +12,16 @@
 		DC17608A1D0860E60091974A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1760881D0860E60091974A /* MainMenu.xib */; };
 		DC17608D1D08613A0091974A /* KanjiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC17608B1D08613A0091974A /* KanjiViewController.swift */; };
 		DC1760941D0862F10091974A /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1760931D0862F10091974A /* EventMonitor.swift */; };
-		DC2585E11D2D45A000CD225A /* MASPreferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2585E01D2D45A000CD225A /* MASPreferences.framework */; };
-		DC2585E31D2D45D100CD225A /* MASPreferences.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC2585E01D2D45A000CD225A /* MASPreferences.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC37B81E1D2D407300A3E6B1 /* KanjiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC37B81C1D2D407300A3E6B1 /* KanjiViewController.xib */; };
 		DC37B8231D2D409200A3E6B1 /* GeneralPreferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC37B8211D2D409200A3E6B1 /* GeneralPreferenceViewController.xib */; };
 		DC5B86401D27A9D20018DFE4 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B863F1D27A9D20018DFE4 /* CSVParser.swift */; };
 		DC9C2BE21D327681000C7AAF /* GeneralPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C2BE11D327681000C7AAF /* GeneralPreferenceViewController.swift */; };
+		DC9C2BE41D369216000C7AAF /* MASPreferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9C2BE31D369216000C7AAF /* MASPreferences.framework */; };
+		DC9C2BE61D369220000C7AAF /* MASPreferences.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC9C2BE31D369216000C7AAF /* MASPreferences.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC9C2BEA1D3A0F5A000C7AAF /* n4.csv in Resources */ = {isa = PBXBuildFile; fileRef = DC9C2BE91D3A0F5A000C7AAF /* n4.csv */; };
+		DC9C2BEC1D3A0F9B000C7AAF /* n3.csv in Resources */ = {isa = PBXBuildFile; fileRef = DC9C2BEB1D3A0F9B000C7AAF /* n3.csv */; };
+		DC9C2BEE1D3A0FE9000C7AAF /* n2.csv in Resources */ = {isa = PBXBuildFile; fileRef = DC9C2BED1D3A0FE9000C7AAF /* n2.csv */; };
+		DC9C2BF01D3A101D000C7AAF /* n1.csv in Resources */ = {isa = PBXBuildFile; fileRef = DC9C2BEF1D3A101D000C7AAF /* n1.csv */; };
 		DCA0886F1D27B0DD002C8372 /* Kanji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA0886E1D27B0DD002C8372 /* Kanji.swift */; };
 		DCA088821D27B629002C8372 /* n5.csv in Resources */ = {isa = PBXBuildFile; fileRef = DCA088811D27B629002C8372 /* n5.csv */; };
 		DCA0888C1D27BB7A002C8372 /* CSVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA0888B1D27BB7A002C8372 /* CSVParserTests.swift */; };
@@ -44,7 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DC2585E31D2D45D100CD225A /* MASPreferences.framework in Embed Frameworks */,
+				DC9C2BE61D369220000C7AAF /* MASPreferences.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,11 +63,15 @@
 		DC1760891D0860E60091974A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DC17608B1D08613A0091974A /* KanjiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiViewController.swift; sourceTree = "<group>"; };
 		DC1760931D0862F10091974A /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
-		DC2585E01D2D45A000CD225A /* MASPreferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MASPreferences.framework; sourceTree = "<group>"; };
 		DC37B81D1D2D407300A3E6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/KanjiViewController.xib; sourceTree = "<group>"; };
 		DC37B8221D2D409200A3E6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GeneralPreferenceViewController.xib; sourceTree = "<group>"; };
 		DC5B863F1D27A9D20018DFE4 /* CSVParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
 		DC9C2BE11D327681000C7AAF /* GeneralPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferenceViewController.swift; sourceTree = "<group>"; };
+		DC9C2BE31D369216000C7AAF /* MASPreferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MASPreferences.framework; path = kanjiglance/MASPreferences.framework; sourceTree = "<group>"; };
+		DC9C2BE91D3A0F5A000C7AAF /* n4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = n4.csv; sourceTree = "<group>"; };
+		DC9C2BEB1D3A0F9B000C7AAF /* n3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = n3.csv; sourceTree = "<group>"; };
+		DC9C2BED1D3A0FE9000C7AAF /* n2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = n2.csv; sourceTree = "<group>"; };
+		DC9C2BEF1D3A101D000C7AAF /* n1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = n1.csv; sourceTree = "<group>"; };
 		DCA0886E1D27B0DD002C8372 /* Kanji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kanji.swift; sourceTree = "<group>"; };
 		DCA088811D27B629002C8372 /* n5.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = n5.csv; sourceTree = "<group>"; };
 		DCA088891D27BB7A002C8372 /* kanjiglanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kanjiglanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2585E11D2D45A000CD225A /* MASPreferences.framework in Frameworks */,
+				DC9C2BE41D369216000C7AAF /* MASPreferences.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +170,7 @@
 		DC2585DF1D2D459200CD225A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DC2585E01D2D45A000CD225A /* MASPreferences.framework */,
+				DC9C2BE31D369216000C7AAF /* MASPreferences.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,6 +186,10 @@
 		DCA088801D27B629002C8372 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DC9C2BEF1D3A101D000C7AAF /* n1.csv */,
+				DC9C2BED1D3A0FE9000C7AAF /* n2.csv */,
+				DC9C2BEB1D3A0F9B000C7AAF /* n3.csv */,
+				DC9C2BE91D3A0F5A000C7AAF /* n4.csv */,
 				DCA088811D27B629002C8372 /* n5.csv */,
 			);
 			path = Resources;
@@ -276,10 +288,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9C2BEE1D3A0FE9000C7AAF /* n2.csv in Resources */,
 				DC37B8231D2D409200A3E6B1 /* GeneralPreferenceViewController.xib in Resources */,
+				DC9C2BF01D3A101D000C7AAF /* n1.csv in Resources */,
 				DC37B81E1D2D407300A3E6B1 /* KanjiViewController.xib in Resources */,
+				DC9C2BEA1D3A0F5A000C7AAF /* n4.csv in Resources */,
 				DC17607A1D085E050091974A /* Assets.xcassets in Resources */,
 				DC17608A1D0860E60091974A /* MainMenu.xib in Resources */,
+				DC9C2BEC1D3A0F9B000C7AAF /* n3.csv in Resources */,
 				DCA088821D27B629002C8372 /* n5.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +464,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/kanjiglance",
 				);
 				INFOPLIST_FILE = kanjiglance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -466,6 +483,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/kanjiglance",
 				);
 				INFOPLIST_FILE = kanjiglance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

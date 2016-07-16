@@ -19,15 +19,14 @@ import Cocoa
     
     private var kanjiStore: KanjiStore?
     private var kanji: Kanji?
-    private var user: User
+    private let user: User
     
-    override init() {
+    init(user: User) {
         // initialize
         statusItem = NSStatusBar
             .systemStatusBar()
             .statusItemWithLength(NSVariableStatusItemLength)
-        user = User()
-        kanjiStore = KanjiStore(level: user.level)
+        self.user = user
         
         super.init()
         
@@ -45,14 +44,25 @@ import Cocoa
         }
         eventMonitor?.start()
         
-        // update & start timer
-        update()
-        startTimer()
+        user.addObserver(
+            self,
+            forKeyPath: "level",
+            options: NSKeyValueObservingOptions.New,
+            context: nil)
+        
+        setup(user.level)
     }
     
     deinit {
         stopTimer()
         eventMonitor?.stop()
+    }
+    
+    func setup(level: Int) {
+        kanjiStore = KanjiStore(level: user.level)
+        // update & start timer
+        update()
+        startTimer()
     }
     
     func update() {
@@ -62,6 +72,19 @@ import Cocoa
         
         if let k = kanji {
             statusItem.button?.title = "\(k.writing):\(k.firstMeaning())"
+        }
+    }
+    
+    // MARK:- Observe user values
+    
+    override func observeValueForKeyPath(
+        keyPath: String?,
+        ofObject object: AnyObject?,
+        change: [String : AnyObject]?,
+        context: UnsafeMutablePointer<Void>)
+    {
+        if let u = object as? User {
+            setup(u.level)
         }
     }
     
@@ -86,7 +109,7 @@ import Cocoa
     
     func showPopover(sender: AnyObject?) {
         if let k = kanji {
-            let vc = KanjiViewController(kanji: k)
+            let vc = KanjiViewController(kanji: k, user: user)
             popover.contentViewController = vc
             
             if let button = statusItem.button {

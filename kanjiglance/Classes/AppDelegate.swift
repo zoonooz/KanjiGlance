@@ -14,9 +14,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     
     var statusItem: KanjiStatusBarItem?
+    let user = User()
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        statusItem = KanjiStatusBarItem()
+        statusItem = KanjiStatusBarItem(user: user)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
