@@ -14,7 +14,6 @@ import Cocoa
     private let popover = NSPopover()
     private var eventMonitor: EventMonitor?
     
-    private let timeInterval: NSTimeInterval = 60
     private var timer: NSTimer?
     
     private var kanjiStore: KanjiStore?
@@ -50,7 +49,7 @@ import Cocoa
             options: NSKeyValueObservingOptions.New,
             context: nil)
         
-        setup(user.level)
+        setup()
     }
     
     deinit {
@@ -58,7 +57,7 @@ import Cocoa
         eventMonitor?.stop()
     }
     
-    func setup(level: Int) {
+    func setup() {
         kanjiStore = KanjiStore(level: user.level)
         // update & start timer
         update()
@@ -83,8 +82,8 @@ import Cocoa
         change: [String : AnyObject]?,
         context: UnsafeMutablePointer<Void>)
     {
-        if let u = object as? User {
-            setup(u.level)
+        if object is User {
+            setup()
         }
     }
     
@@ -93,7 +92,7 @@ import Cocoa
     func startTimer() {
         stopTimer()
         timer = NSTimer.scheduledTimerWithTimeInterval(
-            timeInterval,
+            user.interval,
             target: self,
             selector: #selector(KanjiStatusBarItem.update),
             userInfo: nil,

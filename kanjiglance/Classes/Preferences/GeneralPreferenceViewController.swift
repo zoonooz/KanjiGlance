@@ -20,8 +20,16 @@ class GeneralPreferenceViewController: NSViewController, MASPreferencesViewContr
     @IBOutlet weak var n4Button: NSButton!
     @IBOutlet weak var n5Button: NSButton!
     
+    @IBOutlet weak var i1Button: NSButton!
+    @IBOutlet weak var i2Button: NSButton!
+    @IBOutlet weak var i3Button: NSButton!
+    @IBOutlet weak var i4Button: NSButton!
+    @IBOutlet weak var i5Button: NSButton!
+    
     let user: User
     var levelButtons: [NSButton] = []
+    var intervalButtons: [NSButton] = []
+    let intervals: [NSTimeInterval] = [30, 60, 300, 900, 1800]
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -35,14 +43,14 @@ class GeneralPreferenceViewController: NSViewController, MASPreferencesViewContr
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpKanjiLevelButtons()
+        setupIntervalButtons()
     }
     
     // MARK:- Kanji Level
     
     private func setUpKanjiLevelButtons() {
         levelButtons.appendContentsOf([n1Button, n2Button, n3Button, n4Button, n5Button])
-        let lv = user.level
-        levelButtons[lv - 1].state = NSOnState
+        levelButtons[user.level - 1].state = NSOnState
     }
     
     @IBAction func levelButtonClick(sender: NSButton) {
@@ -51,5 +59,20 @@ class GeneralPreferenceViewController: NSViewController, MASPreferencesViewContr
         }
     }
     
+    // MARK:- Change Interval
     
+    private func setupIntervalButtons() {
+        intervalButtons.appendContentsOf([i1Button, i2Button, i3Button, i4Button, i5Button])
+        if let index = intervals.indexOf(user.interval) {
+            intervalButtons[index].state = NSOnState
+        } else {
+            intervalButtons[1].state = NSOnState
+        }
+    }
+    
+    @IBAction func intervalButtonClick(sender: NSButton) {
+        _ = intervalButtons.indexOf(sender).map {
+            user.interval = intervals[$0]
+        }
+    }
 }

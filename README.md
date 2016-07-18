@@ -4,9 +4,9 @@ Remember Kanji while you are working or doing something else on your desktop by 
 ![](screenshot.png)
 
 ### Todo
-- [ ] Add more Kanji sets
+- [x] Add more Kanji sets
+- [x] Settings to adjust time and select only some Kanji set
 - [ ] Able to go back and forth
-- [ ] Settings to adjust time and select only some Kanji set
 - [ ] ...
 
 Pull Request are welcome!

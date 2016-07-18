@@ -10,18 +10,28 @@ import Foundation
 
 class User: NSObject {
     
-    private let UserLevel = "level"
+    private let UserLevel = "user_level"
+    private let UserInterval = "user_interval"
     private let preference = NSUserDefaults.standardUserDefaults()
     
     // default values
-    dynamic var level: Int = 5 {
+    dynamic var level: Int {
         didSet {
             preference.setInteger(level, forKey: UserLevel)
         }
     }
     
+    dynamic var interval: NSTimeInterval {
+        didSet {
+            preference.setDouble(interval, forKey: UserInterval)
+        }
+    }
+    
     override init() {
         let lv = preference.integerForKey(UserLevel)
-        if lv < 6 && lv > 0 { level = lv }
+        let intv = preference.doubleForKey(UserInterval)
+        level = lv == 0 ? 5 : lv
+        interval = intv == 0 ? 60 : intv
+        super.init()
     }
 }
