@@ -17,13 +17,13 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="325" height="283"/>
+            <rect key="frame" x="0.0" y="0.0" width="330" height="283"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eyd-ly-8bZ">
-                    <rect key="frame" x="18" y="170" width="289" height="93"/>
+                    <rect key="frame" x="28" y="170" width="274" height="93"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="285" id="UDY-GS-Dqe"/>
+                        <constraint firstAttribute="width" constant="270" id="UDY-GS-Dqe"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="生" id="MCu-CV-0GP">
                         <font key="font" size="100" name=".HiraKakuInterface-W4"/>
@@ -32,7 +32,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-rO-cEx">
-                    <rect key="frame" x="18" y="140" width="289" height="22"/>
+                    <rect key="frame" x="18" y="140" width="294" height="22"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="life" id="iqM-P2-r3i">
                         <font key="font" metaFont="system" size="18"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -40,7 +40,7 @@
                     </textFieldCell>
                 </textField>
                 <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="84M-zK-ni7">
-                    <rect key="frame" x="20" y="129" width="285" height="5"/>
+                    <rect key="frame" x="20" y="129" width="290" height="5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Enp-3B-dvm"/>
                     </constraints>
@@ -60,7 +60,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-KW-i0o">
-                    <rect key="frame" x="111" y="106" width="196" height="17"/>
+                    <rect key="frame" x="111" y="106" width="201" height="17"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="life, genuine, birth" id="pIM-Vn-qnj">
                         <font key="font" metaFont="systemLight" size="13"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -79,16 +79,20 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-j4-W2H">
-                    <rect key="frame" x="111" y="20" width="196" height="78"/>
+                    <rect key="frame" x="111" y="20" width="201" height="78"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="セイ ・ ショウ ・ い.きる ・ い.かす ・ い.ける ・ う.まれる ・ うま.れる ・ う.まれ ・ うまれ ・ う.む ・ お.う ・ は.える ・ は.やす ・ き ・ なま ・ なま- ・ な.る ・ な.す ・ む.す ・" id="9L8-IW-w84">
                         <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H01-9s-h5D">
-                    <rect key="frame" x="274" y="247" width="49" height="32"/>
-                    <buttonCell key="cell" type="push" title="S" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BRX-Q1-iQV">
+                <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H01-9s-h5D">
+                    <rect key="frame" x="302" y="251" width="20" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="VWM-cm-LRx"/>
+                        <constraint firstAttribute="height" constant="24" id="y3m-fH-gFy"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ic_settings" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" state="on" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="BRX-Q1-iQV">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -115,13 +119,16 @@
                 <constraint firstAttribute="bottom" secondItem="Yfw-j4-W2H" secondAttribute="bottom" constant="20" id="gYq-Tx-QBR"/>
                 <constraint firstAttribute="trailing" secondItem="84M-zK-ni7" secondAttribute="trailing" constant="20" id="izi-as-Lfl"/>
                 <constraint firstAttribute="trailing" secondItem="zS3-KW-i0o" secondAttribute="trailing" constant="20" id="kH1-IM-D2Z"/>
-                <constraint firstItem="eyd-ly-8bZ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="koG-jX-eLd"/>
+                <constraint firstItem="eyd-ly-8bZ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="30" id="koG-jX-eLd"/>
                 <constraint firstItem="Yfw-j4-W2H" firstAttribute="leading" secondItem="gRS-94-EqT" secondAttribute="trailing" constant="8" id="oi9-J5-tPh"/>
                 <constraint firstItem="Yfw-j4-W2H" firstAttribute="top" secondItem="zS3-KW-i0o" secondAttribute="bottom" constant="8" id="sB6-19-GNU"/>
                 <constraint firstItem="eyd-ly-8bZ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="sWd-wB-SXD"/>
-                <constraint firstAttribute="trailing" secondItem="eyd-ly-8bZ" secondAttribute="trailing" constant="20" id="xUv-ML-DSx"/>
+                <constraint firstAttribute="trailing" secondItem="eyd-ly-8bZ" secondAttribute="trailing" constant="30" id="xUv-ML-DSx"/>
             </constraints>
             <point key="canvasLocation" x="227.5" y="267.5"/>
         </customView>
     </objects>
+    <resources>
+        <image name="ic_settings" width="24" height="24"/>
+    </resources>
 </document>
